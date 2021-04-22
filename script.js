@@ -16,7 +16,7 @@ function notifyMe() {
   // Otherwise, we need to ask the user for permission
   else if (Notification.permission !== "denied") {
     Notification.requestPermission().then(function (permission) {
-      $('#notify').attr('title', `please click allow for the website to send you notifications`);
+      $('#notify').attr('title', 'please click allow for the website to send you notifications');
       // If the user accepts, let's create a notification
       if (permission === "granted") {
         sendNotification();
@@ -27,7 +27,7 @@ function notifyMe() {
     $('#notify').text("denied");
     $('#notify').css('background', '#FF8066');
     $('#notify').attr('disabled', true);
-    $('#notify').attr('title', `please allow the website to send you notifications`);
+    $('#notify').attr('title', 'please allow the website to send you notifications');
   }
 
   function sendNotification() {
@@ -38,10 +38,15 @@ function notifyMe() {
     greeting.addEventListener('click', function () {
       window.open('https://github.com/bethropolis/NotifyApiTest');
     });
-
     $('#notify').text("notified");
     $('#notify').css('background', 'rgb(19, 196, 155) none repeat scroll 0% 0%');
-    $('#notify').attr('title', `notification sent`);
+    $('#notify').attr('title', 'notification sent');
+
+    setTimeout(function(){
+    $('#notify').text("notify");
+     $('#notify').css('background', 'hsl(245, 84%, 68%)'); 
+    $('#notify').attr('title', 'notification ');    
+    },2000)
   }
 }
 function showOne(data) {
@@ -98,6 +103,5 @@ $("#save").click(function () {
 
 $("#notify").click(function () {
   $('#notify').text("notifying...");
-  $('#notify').css('background', 'hsl(245, 84%, 68%)');
   notifyMe();
 }); 

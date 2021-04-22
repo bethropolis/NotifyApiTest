@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html> 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>push notify</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script> 
-  </head>
-  <body>
+<html>
 
-    <div class="cont">   
-      <button id="notify" title="recieve a notification">Notify</button> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<!-- Primary Meta Tags -->
+	<title>browser notification test</title>
+	<meta name="title" content="browser notification test">
+	<meta name="description" content="this is a test trying the browser notification API">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://metatags.io/">
+	<meta property="og:title" content="browser notification test">
+	<meta property="og:description" content="this is a test trying the browser notification API">
+	<meta property="og:image" content="./meta.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://metatags.io/">
+	<meta property="twitter:title" content="browser notification test">
+	<meta property="twitter:description" content="this is a test trying the browser notification API">
+	<meta property="twitter:image" content="/meta.png">
+	<title>push notify</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+	 crossorigin="anonymous">
+
+	</script>
+</head>
+
+<body>
+
+	<div class="cont">
+		<button id="notify" title="recieve a notification">Notify</button> 
       <div class="data">
         <label for="title">Enter title:<input type="text" id="title" placeholder="title..."></label><br><br>
         <textarea name="" id="message" cols="30" rows="10" placeholder="enter message here..."></textarea>  
